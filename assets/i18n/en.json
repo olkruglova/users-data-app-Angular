@@ -1,0 +1,16 @@
+{
+    "title": "Users Data Application",
+    "name": "name",
+    "surname": "surname",
+    "dateOfBirth": "date of birth",
+    "mobileNumber": "mobile number",
+    "address": "address",
+    "editSelectedButton": "Edit selected",
+    "editButton": "Edit",
+    "deleteButton": "Delete",
+    "city": "City",
+    "street": "Street",
+    "houseNumber": "House number",
+    "confirmButton": "Confirm",
+    "cancelButton": "Cancel"
+}
