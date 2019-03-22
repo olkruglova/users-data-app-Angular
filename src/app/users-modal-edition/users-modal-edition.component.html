@@ -1,0 +1,36 @@
+<div>
+  <form>
+    <div class="modal-form-input">
+        <label for="name">{{'name' | translate}}</label><br>
+        <input #input type="text" name="name" id="name" [(ngModel)]="data.name"><br>
+        <label for="surname">{{'surname' | translate}}</label><br>
+        <input #input type="text" name="surname" id="surname" [(ngModel)]="data.surname"><br>
+    </div>
+    <div class="modal-form-input">
+        <label for="dateOfBirth">{{'dateOfBirth' | translate}}</label><br>
+        <input #input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="dd-mm-yyyy" [(ngModel)]="data.dateOfBirth"><br>
+        <label for="mobileNumber">{{'mobileNumber' | translate}}</label><br>
+        <input type="number" name="mobileNumber" id="mobileNumber" [(ngModel)]="data.mobileNumber"><br>
+    </div>
+    <p>Address:</p>
+    <div class="modal-form-input">
+      <label for="city">{{'city' | translate}}</label><br>
+      <input type="text" name="city" id="city" [(ngModel)]="data.address.city">
+    </div>
+    <div class="modal-form-input">
+      <label for="street">{{'street' | translate}}</label><br>
+      <input type="text" name="street" id="street" [(ngModel)]="data.address.street">
+    </div>
+    <div class="modal-form-input">
+      <label for="houseNumber">{{'houseNumber' | translate}}</label><br>
+      <input type="number" name="houseNumber" id="houseNumber" [(ngModel)]="data.address.houseNumber">
+    </div>
+  </form>
+  <div class="buttons">
+    <mat-dialog-actions>
+      <button type="submit" class="btn btn-success btn-lg" (click)="onCloseConfirm(data.id, data.key, $event)">{{'confirmButton' | translate}}</button>&nbsp;
+      <button class="btn btn-warning btn-lg" (click)="onCloseCancel()">{{'cancelButton' | translate}}</button>
+    </mat-dialog-actions>
+  </div>
+</div>
+

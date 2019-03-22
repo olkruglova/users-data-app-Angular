@@ -1,0 +1,42 @@
+.table {
+    font-size: 1.4em;
+}
+thead {
+    background-color: #eaf7fd;
+}
+.table tr {
+    transition: 0.2s ease;
+}
+.table tr:hover {
+    background-color: #eaf7fd;
+}
+
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
+.checkbox {
+    width: 23px;
+    height: 23px;
+}
+.fas {
+    margin-right: 5px;
+}
+.buttons, .button-selected {
+    float: right;
+    text-align: right;
+}
+input {
+    max-width: 55%;
+    padding-left: 4px;
+}
+.address-column {
+    text-align: right;
+    max-width: 15%;
+}
+label {
+    font-size: 17px;
+    margin-right: 4px;
+}
+span {
+    padding: 0.7rem 1rem;
+}

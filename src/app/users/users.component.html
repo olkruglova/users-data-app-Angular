@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">id</th>
+          <th scope="col">{{'name' | translate}}</th>
+          <th scope="col">{{'surname' | translate}}</th>
+          <th scope="col">{{'dateOfBirth' | translate}}</th>
+          <th scope="col">{{'mobileNumber' | translate}}</th>
+          <th scope="col">{{'address' | translate}}</th>
+          <th>
+              <button type="button" class="btn btn-info btn-lg button-selected" disabled><i class="fas fa-edit"></i>{{'editSelectedButton' | translate}}</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of users; let id = index">
+        <tr>
+          <td id="checkbox-col">
+              <input type="checkbox" class="checkbox">
+          </td>
+          <td id="user-id-col">{{user.id}}</td>
+          <td>
+            <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{user.name}}</span>
+          </td>
+          <td>
+            <span (keyup)="changeValue(id, 'surname', $event)" (blur)="updateList(id, 'surname', $event)" contenteditable="true">{{user.surname}}</span>
+          </td>
+          <td>
+            <span (keyup)="changeValue(id, 'dateOfBirth', $event)" (blur)="updateList(id, 'dateOfBirth', $event)" contenteditable="true">{{user.dateOfBirth}}</span>
+          </td>
+          <td>
+            <span (keyup)="changeValue(id, 'mobileNumber', $event)" (blur)="updateList(id, 'mobileNumber', $event)" contenteditable="true">{{user.mobileNumber}}</span>
+          </td>
+          <td>
+            <span (keyup)="changeValue(id, 'address.city', $event)" (blur)="updateList(id, 'address.city', $event)" contenteditable="true">{{user.address.city}},</span>
+            <span (keyup)="changeValue(id, 'address.street', $event)" (blur)="updateList(id, 'address.street', $event)" contenteditable="true">{{user.address.street}}</span>
+            <span (keyup)="changeValue(id, 'address.houseNumber', $event)" (blur)="updateList(id, 'address.houseNumber', $event)" contenteditable="true">{{user.address.houseNumber}}</span>
+          </td>
+          <td>
+            <div class="buttons">
+              <button type="button" class="btn btn-info btn-lg" (click)="openDialog(user)"><i class="fas fa-edit"></i>{{'editButton' | translate}}</button>
+              <button type="button" class="btn btn-danger btn-lg" (click)="removeUser(id)"><i class="fas fa-trash-alt"></i>{{'deleteButton' | translate}}</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<!-- 
+ <div class="card">
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2">
+
+        </span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Person Name</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">Company Name</th>
+            <th class="text-center">Country</th>
+            <th class="text-center">City</th>
+            <th class="text-center">Sort</th>
+            <th class="text-center">Remove</th>
+          </tr>
+          <tr *ngFor="let person of personList; let id = index">
+            <td>
+              <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{person.name}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)">{{person.age}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'companyName', $event)" (blur)="updateList(id, 'companyName', $event)">{{person.companyName}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'country', $event)" (blur)="updateList(id, 'country', $event)">{{person.country}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'city', $event)" (blur)="updateList(id, 'city', $event)">{{person.city}}</span>
+            </td>
+            <td>
+
+            </td>
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div> -->
