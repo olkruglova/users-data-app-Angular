@@ -1,0 +1,16 @@
+{
+    "title": "Application de Données d'Utilisateurs",
+    "name": "prénom",
+    "surname": "nom de famille",
+    "dateOfBirth": "date de naissance",
+    "mobileNumber": "numéro de portable",
+    "address": "adresse",
+    "editSelectedButton": "Modifier la sélection",
+    "editButton": "Modifier",
+    "deleteButton": "Effacer",
+    "city": "Ville",
+    "street": "Rue",
+    "houseNumber": "Numéro de maison",
+    "confirmButton": "confirmer",
+    "cancelButton": "Annuler"
+}

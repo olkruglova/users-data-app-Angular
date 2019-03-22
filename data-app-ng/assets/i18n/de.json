@@ -1,0 +1,16 @@
+{
+    "title": "Benutzerdaten Anwendung",
+    "name": "name",
+    "surname": "familienname",
+    "dateOfBirth": "geburtsdatum",
+    "mobileNumber": "handynummer",
+    "address": "adresse",
+    "editSelectedButton": "Ausgewählte bearbeiten",
+    "editButton": "Bearbeiten",
+    "deleteButton": "Löschen",
+    "city": "Stadt",
+    "street": "Straße",
+    "houseNumber": "Hausnummer",
+    "confirmButton": "Bestätigen",
+    "cancelButton": "Stornieren"
+}
